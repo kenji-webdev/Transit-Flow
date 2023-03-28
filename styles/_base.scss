@@ -27,6 +27,16 @@
     /* Chrome 36+, Opera 23+, Firefox 39+ */
       url("../assets/fonts/rubik-v26-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+/* rubik-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/rubik-v26-latin-500.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("../assets/fonts/rubik-v26-latin-500.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 /* rubik-600 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -36,6 +46,16 @@
   src: url("../assets/fonts/rubik-v26-latin-600.woff2") format("woff2"),
     /* Chrome 36+, Opera 23+, Firefox 39+ */
       url("../assets/fonts/rubik-v26-latin-600.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* rubik-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/rubik-v26-latin-700.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("../assets/fonts/rubik-v26-latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* krub-regular - latin */
@@ -48,23 +68,33 @@
     /* Chrome 36+, Opera 23+, Firefox 39+ */
       url("../assets/fonts/krub-v9-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+/* krub-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Krub";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/krub-v9-latin-500.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("../assets/fonts/krub-v9-latin-500.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 /* krub-600 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Krub";
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/krub-v9-latin-600.woff2") format("woff2"),
+  src: url("../assets/fonts/krub-v9-latin-600.woff2") format("woff2"),
     /* Chrome 36+, Opera 23+, Firefox 39+ */
-      url("../fonts/krub-v9-latin-600.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("../assets/fonts/krub-v9-latin-600.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
-.header {
-  &__topbar {
-    background-color: var(--secondary-color);
-  }
-  &__topbar--content {
-    max-width: var(--headerMaxContent);
-    margin: 0 auto;
-  }
+/* krub-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Krub";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/krub-v9-latin-700.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("../assets/fonts/krub-v9-latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
