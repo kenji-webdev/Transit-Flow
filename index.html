@@ -72,19 +72,13 @@
         </div>
       </div>
       <nav class="nav">
-        <div>
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Pages <img src="assets/svgs/Dropdown.svg" alt="open menu" width="4" height="8" fetchpriority="high" decoding="async"></img></li>
-            <li>Project</li>
-            <li>Contact</li>
-          </ul>
-          <ul>
+        <div class="nav__mobile__bar">
+          <a href="#" class="nav__cta">Request Quote</a>
+          <ul class="nav__socials nav__socials--tablet">
             <li>
               <a href="#"
                 ><img
-                  src=""
+                  src="/assets/svgs/Instagram.svg"
                   alt="Instagram"
                   aria-hidden="true"
                   decoding="async"
@@ -96,7 +90,7 @@
             <li>
               <a href="#"
                 ><img
-                  src=""
+                  src="/assets/svgs/Facebook.svg"
                   alt="Facebook"
                   aria-hidden="true"
                   decoding="async"
@@ -108,7 +102,7 @@
             <li>
               <a href="#"
                 ><img
-                  src=""
+                  src="/assets/svgs/Twitter.svg"
                   alt="Twitter"
                   aria-hidden="true"
                   decoding="async"
@@ -120,7 +114,7 @@
             <li>
               <a href="#"
                 ><img
-                  src=""
+                  src="/assets/svgs/LinkedIn.svg"
                   alt="LinkedIn"
                   aria-hidden="true"
                   decoding="async"
@@ -130,9 +124,99 @@
               /></a>
             </li>
           </ul>
-          <a href="#" class="nav__cta">Request Quote</a>
+          <button class="nav__hamburger">
+            <img
+              src="assets/svgs/Hamburger.svg"
+              alt="Mobile menu toggle"
+              decoding="async"
+              fetchpriority="high"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+        <div class="nav__content">
+          <ul class="nav__pages">
+            <li class="nav__pages__item">
+              <a href="/" class="nav__pages__link">Home</a>
+            </li>
+            <li class="nav__pages__item">
+              <a href="/about.html" class="nav__pages__link">About</a>
+            </li>
+            <li class="nav__pages__item">
+              <a href="/pages.html" class="nav__pages__link">Pages</a
+              ><img
+                src="assets/svgs/Dropdown.svg"
+                alt="open menu"
+                width="4"
+                height="8"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </li>
+            <li class="nav__pages__item">
+              <a href="/project.html" class="nav__pages__link">Project</a>
+            </li>
+            <li class="nav__pages__item">
+              <a href="/contact.html" class="nav__pages__link">Contact</a>
+            </li>
+          </ul>
+          <div class="nav__right">
+            <ul class="nav__socials">
+              <li>
+                <a href="#"
+                  ><img
+                    src="/assets/svgs/Instagram.svg"
+                    alt="Instagram"
+                    aria-hidden="true"
+                    decoding="async"
+                    fetchpriority="high"
+                    width="20"
+                    height="20"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="/assets/svgs/Facebook.svg"
+                    alt="Facebook"
+                    aria-hidden="true"
+                    decoding="async"
+                    fetchpriority="high"
+                    width="20"
+                    height="20"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="/assets/svgs/Twitter.svg"
+                    alt="Twitter"
+                    aria-hidden="true"
+                    decoding="async"
+                    fetchpriority="high"
+                    width="20"
+                    height="20"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="/assets/svgs/LinkedIn.svg"
+                    alt="LinkedIn"
+                    aria-hidden="true"
+                    decoding="async"
+                    fetchpriority="high"
+                    width="20"
+                    height="20"
+                /></a>
+              </li>
+            </ul>
+            <a href="#" class="nav__cta">Request Quote</a>
+          </div>
         </div>
       </nav>
     </header>
+    <script src="script.js"></script>
   </body>
 </html>
