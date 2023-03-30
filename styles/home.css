@@ -99,6 +99,10 @@ button {
   font-weight: 700;
   src: url("../assets/fonts/krub-v9-latin-700.woff2") format("woff2"), url("../assets/fonts/krub-v9-latin-700.woff") format("woff");
   /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+@media only screen and (min-width: 2000px) {
+  body,
+  html {
+    font-size: clamp(100%, 0.9vw, 300%); } }
 .header__topbar {
   background-color: var(--secondary-color); }
 .header__topbar--content {
@@ -127,7 +131,8 @@ button {
 
 .nav {
   background: rgba(9, 18, 66, 0.25);
-  position: relative; }
+  position: absolute;
+  width: 100%; }
   .nav__content {
     max-width: var(--headerMaxContent);
     margin: 0 auto;
@@ -135,7 +140,7 @@ button {
     right: 0;
     padding: 0;
     width: 100%;
-    z-index: -1;
+    z-index: 1;
     overflow: hidden;
     background-color: var(--secondary-color);
     top: 3.6875rem;
@@ -148,19 +153,23 @@ button {
     gap: 1rem; }
     .nav__content.open {
       height: 24.25rem;
-      z-index: -100; }
+      z-index: 100; }
   .nav__pages {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    height: 100%; }
     .nav__pages__item {
-      padding: 0.75rem 0;
       font-weight: 500;
+      height: 100%;
       line-height: 1.1875rem; }
     .nav__pages__link {
+      height: 100%;
+      display: flex;
+      align-items: center;
       color: white; }
       .nav__pages__link.active {
-        border-bottom: 1px solid black; }
+        border-bottom: 1px solid white; }
   .nav__socials {
     display: flex;
     justify-content: center;
@@ -185,6 +194,14 @@ button {
     display: flex; }
   .nav__socials--tablet {
     display: none; }
+
+.home {
+  background-image: url("/assets/imgs/Ship.webp");
+  min-height: calc(100vh - 9.6875rem);
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  z-index: -1; }
 
 @media only screen and (min-width: 768px) {
   .nav__hamburger {
@@ -218,7 +235,7 @@ button {
   .nav__mobile__bar .nav__cta {
     display: none; }
   .nav__content {
-    height: unset;
+    height: 4.875rem;
     flex-direction: row;
     position: unset;
     background: unset;
@@ -229,9 +246,11 @@ button {
   .nav__pages {
     flex-direction: row;
     gap: 1.875rem; }
-    .nav__pages__item:not(:first-child) {
+    .nav__pages__item:not(:first-child) ::before {
+      content: "";
       border-left: 1px solid rgba(255, 255, 255, 0.2);
-      padding-left: 1.875rem; } }
+      padding-left: 1.875rem;
+      height: 1.1875rem; } }
 @media only screen and (min-width: 1300px) {
   .header__topbar--content {
     flex-direction: row;

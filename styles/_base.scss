@@ -111,3 +111,10 @@ button {
     /* Chrome 36+, Opera 23+, Firefox 39+ */
       url("../assets/fonts/krub-v9-latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
+@media only screen and (min-width: 2000px) {
+  body,
+  html {
+    font-size: clamp(100%, 0.9vw, 300%);
+  }
+}

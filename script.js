@@ -5,6 +5,7 @@ hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("active");
   menu.classList.toggle("open");
 });
+
 const navLinks = document
   .querySelectorAll(".nav__pages__link")
   .forEach((link) => {
