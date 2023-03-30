@@ -1,9 +1,34 @@
 @mixin container($padding: 0 1.25rem, $margin: 0 auto) {
   padding: $padding;
   @media (min-width: 1200px) {
-    max-width: 1200px;
+    max-width: var(--headerMaxContent);
     padding-left: 0;
     padding-right: 0;
     margin: 0 auto;
+  }
+}
+
+@mixin topper(
+  $background:
+    linear-gradient(94.06deg, #ffb629 -1.21%, #ffda56 58.66%, #ffd7a6 116.84%)
+) {
+  display: inline-flex;
+  min-height: 1.1875rem;
+  gap: 0.5625rem;
+  padding: 0.1875rem 0.5625rem;
+  font-size: 0.875rem;
+  font-family: "Rubik", sans-serif;
+  background: rgba(4, 28, 55, 0.5);
+  align-items: center;
+  position: relative;
+  margin-bottom: 0.5rem;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -0.25rem;
+    display: inline-block;
+    background: $background;
+    width: 0.25rem;
+    height: 1.4375rem;
   }
 }
