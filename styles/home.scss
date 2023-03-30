@@ -2,10 +2,8 @@
 @import "mixins";
 
 .header {
+  background-color: var(--secondary-color);
   &__topbar {
-    background-color: var(--secondary-color);
-  }
-  &__topbar--content {
     max-width: var(--headerMaxContent);
     margin: 0 auto;
     display: flex;
@@ -19,18 +17,18 @@
     flex-direction: column;
     gap: 1rem;
     color: #ffffff;
-    &__item {
-      display: flex;
-      gap: 1rem;
-    }
-    &__info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-size: 0.875rem;
-      font-weight: 500;
-      line-height: 1.1875rem;
-    }
+  }
+  &__item {
+    display: flex;
+    gap: 1rem;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.1875rem;
   }
 }
 
@@ -67,20 +65,20 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
-    &__item {
-      font-weight: 500;
-      height: 100%;
-      line-height: 1.1875rem;
+  }
+  &__page {
+    font-weight: 500;
+    height: 100%;
+    line-height: 1.1875rem;
+  }
+  &__link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &.active {
+      border-bottom: 1px solid white;
     }
-    &__link {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      &.active {
-        border-bottom: 1px solid white;
-      }
-      color: white;
-    }
+    color: white;
   }
   &__socials {
     display: flex;
@@ -106,7 +104,7 @@
     display: block;
     margin: 0 auto;
   }
-  &__mobile__bar {
+  &__mobile {
     display: flex;
   }
   &__socials--tablet {
@@ -115,66 +113,65 @@
 }
 
 .home {
-  background-image: url("/assets/imgs/Ship.webp");
   min-height: calc(100vh - 9.6875rem);
   background-size: cover;
   background-position: 50% 50%;
-  &__text-content {
+  &__container {
     @include container(10.8125rem 1.25rem);
     color: white;
-    &__topper {
-      @include topper();
-    }
-    &__title {
-      font-size: clamp(2.125rem, 6vw, 3.75rem);
-      font-weight: 700;
-      font-family: "Rubik", sans-serif;
-      max-width: 34.625rem;
-      margin-bottom: 0.375rem;
-    }
-    &__paragraph {
-      max-width: 34.625rem;
-      margin-bottom: 2.6875rem;
-    }
-    &__cta {
-      font-weight: 600;
-      line-height: 1.375rem;
-      color: #23212a;
-      padding: 1.1875rem 3rem;
+  }
+  &__topper {
+    @include topper();
+  }
+  &__title {
+    font-size: clamp(2.125rem, 6vw, 3.75rem);
+    font-weight: 700;
+    font-family: "Rubik", sans-serif;
+    max-width: 34.625rem;
+    margin-bottom: 0.375rem;
+  }
+  &__paragraph {
+    max-width: 34.625rem;
+    margin-bottom: 2.6875rem;
+  }
+  &__cta {
+    font-weight: 600;
+    line-height: 1.375rem;
+    color: #23212a;
+    padding: 1.1875rem 3rem;
+    position: absolute;
+    overflow: hidden;
+    background: linear-gradient(
+      94.06deg,
+      #ffb629 -1.21%,
+      #ffda56 58.66%,
+      #ffd7a6 116.84%
+    );
+    &::after {
+      content: "";
+      top: 0;
+      right: -32px;
       position: absolute;
-      overflow: hidden;
-      background: linear-gradient(
-        94.06deg,
-        #ffb629 -1.21%,
-        #ffda56 58.66%,
-        #ffd7a6 116.84%
-      );
-      &__text {
-        position: relative;
-        z-index: 1;
-      }
+      width: 68px;
+      height: 105.09px;
+      background: #fff;
+      transform: rotate(23.72deg);
+      border-top-left-radius: 260px;
+      transition: all 0.35s ease-in-out;
+    }
+    &:hover {
       &::after {
-        content: "";
-        top: 0;
-        right: -32px;
-        position: absolute;
-        width: 68px;
-        height: 105.09px;
-        background: #fff;
-        transform: rotate(23.72deg);
-        border-top-left-radius: 260px;
-        transition: all 0.35s ease-in-out;
-      }
-      &:hover {
-        &::after {
-          right: 0;
-          width: 100%;
-          height: 100%;
-          transform: rotate(0);
-          border-top-left-radius: 0;
-        }
+        right: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotate(0);
+        border-top-left-radius: 0;
       }
     }
+  }
+  &__text {
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -182,16 +179,14 @@
   @include container(6rem 1.25rem 7.5625rem 1.25rem);
   display: flex;
   flex-flow: column nowrap;
-  &__text-content {
-    &__topper {
-      @include topper();
-    }
-    &__title {
-      font-size: 2.1875rem;
-      font-family: "Rubik", sans-serif;
-      font-weight: 600;
-      max-width: 18.375rem;
-    }
+  &__topper {
+    @include topper();
+  }
+  &__title {
+    font-size: 2.1875rem;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    max-width: 18.375rem;
   }
   &__container {
     display: flex;
@@ -207,28 +202,83 @@
     & * {
       margin-bottom: 0.8125rem;
     }
-    &__title {
-      font-family: "Rubik", sans-serif;
-      font-size: 1.5625rem;
-      font-weight: 400;
-      color: var(--primary-font-color);
-      line-height: 1.875rem;
-      text-align: center;
+  }
+  &__subtitle {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5625rem;
+    font-weight: 400;
+    color: var(--primary-font-color);
+    line-height: 1.875rem;
+    text-align: center;
+  }
+  &__paragraph {
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: var(--secondary-font-color);
+    text-align: center;
+  }
+}
+
+.about {
+  &__background {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+  }
+  &__content {
+    @include container($margin: -5rem auto 0 auto);
+    margin: -5rem auto 0 auto;
+    position: relative;
+  }
+  &__container {
+    background: white;
+    @include textContainer(1.875rem 1.25rem 0 1.25rem);
+  }
+  &__left {
+    & * {
+      margin-bottom: 0.75rem;
     }
-    &__paragraph {
-      font-weight: 500;
-      line-height: 1.5rem;
-      color: var(--secondary-font-color);
-      text-align: center;
+  }
+  &__topper {
+    @include topper();
+    margin-bottom: 0.75rem;
+  }
+  &__title {
+    font-size: 2.1875rem;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    line-height: 2.5625rem;
+    color: var(--primary-font-color);
+  }
+  &__paragraph {
+    font-weight: 500;
+    color: var(--secondary-font-color);
+    line-height: 1.5rem;
+    &:last-of-type {
+      margin-bottom: 1.5625rem;
     }
+  }
+  &__feature {
+  }
+}
+
+@media (max-width: 767px) {
+  .home {
+    background-image: url("/assets/imgs/Ship-700.webp");
   }
 }
 
 @media only screen and (min-width: 768px) {
+  .home {
+    background-image: url("/assets/imgs/Ship.webp");
+  }
   .nav {
     &__hamburger {
       margin: 0 0 0 auto;
       padding-right: 1rem;
+    }
+    &__socials {
+      display: none;
     }
     &__socials--tablet {
       display: flex;
@@ -240,6 +290,7 @@
   .services {
     &__container {
       flex-flow: row wrap;
+      justify-content: center;
     }
     &__service {
       width: 45%;
@@ -269,6 +320,7 @@
       display: flex;
     }
     &__socials {
+      display: flex;
       margin-bottom: 0;
       align-items: center;
       margin-right: 3.125rem;
@@ -276,7 +328,7 @@
     &__socials--tablet {
       display: none;
     }
-    &__mobile__bar {
+    &__mobile {
       .nav__cta {
         display: none;
       }
@@ -294,16 +346,21 @@
     &__pages {
       flex-direction: row;
       gap: 1.875rem;
-      &__item {
-        &:not(:first-child) {
-          ::before {
-            content: "";
-            border-left: 1px solid rgba(255, 255, 255, 0.2);
-            padding-left: 1.875rem;
-            height: 1.1875rem;
-          }
+    }
+    &__page {
+      &:not(:first-child) {
+        ::before {
+          content: "";
+          border-left: 1px solid rgba(255, 255, 255, 0.2);
+          padding-left: 1.875rem;
+          height: 1.1875rem;
         }
       }
+    }
+  }
+  .about {
+    &__background {
+      height: auto;
     }
   }
 }
@@ -331,35 +388,33 @@
       row-gap: 4.375rem;
       column-gap: 5.1875rem;
     }
-    &__text-content {
-      &__title {
-        width: 18.375rem;
-      }
+    &__title {
+      width: 18.375rem;
     }
     &__service {
       flex-direction: row;
       align-items: flex-start;
-      &__image__container {
-        min-width: 5.25rem;
+    }
+    &__content {
+      position: relative;
+      padding-left: 1.875rem;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-left: 1px solid #d8d8d8;
+        height: 90%;
       }
-      &__text-content {
-        position: relative;
-        padding-left: 1.875rem;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          border-left: 1px solid #d8d8d8;
-          height: 90%;
-        }
-      }
-      &__title {
-        text-align: left;
-      }
-      &__paragraph {
-        text-align: left;
-      }
+    }
+    &__image {
+      min-width: 5.25rem;
+    }
+    &__subtitle {
+      text-align: left;
+    }
+    &__paragraph {
+      text-align: left;
     }
   }
 }

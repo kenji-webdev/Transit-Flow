@@ -10,69 +10,67 @@
   <body>
     <header class="header">
       <div class="header__topbar">
-        <div class="header__topbar--content">
-          <a href="/" aria-description="go to homepage">
+        <a href="/" aria-description="go to homepage">
+          <img
+            src="assets/svgs/Logo.svg"
+            alt="logo"
+            aria-hidden="true"
+            decoding="async"
+            fetchpriority="high"
+            width="210"
+            height="36"
+          />
+        </a>
+        <ul class="header__contact">
+          <li class="header__item">
             <img
-              src="assets/svgs/Logo.svg"
-              alt="logo"
-              aria-hidden="true"
+              src="assets/svgs/Time.svg"
+              alt="icon"
               decoding="async"
+              aria-hidden="true"
               fetchpriority="high"
-              width="210"
-              height="36"
+              width="63"
+              height="63"
             />
-          </a>
-          <ul class="header__contact">
-            <li class="header__contact__item">
-              <img
-                src="assets/svgs/Time.svg"
-                alt="icon"
-                decoding="async"
-                aria-hidden="true"
-                fetchpriority="high"
-                width="63"
-                height="63"
-              />
-              <div class="header__contact__info">
-                <span>Mon - Sat 9.00 - 18.00</span>
-                <span>Sunday Closed</span>
-              </div>
-            </li>
-            <li class="header__contact__item">
-              <img
-                src="assets/svgs/Email.svg"
-                alt="icon"
-                decoding="async"
-                aria-hidden="true"
-                fetchpriority="high"
-                width="63"
-                height="63"
-              />
-              <div class="header__contact__info">
-                <span>Email</span>
-                <span>contact@logistics.com</span>
-              </div>
-            </li>
-            <li class="header__contact__item">
-              <img
-                src="assets/svgs/Phone.svg"
-                alt="icon"
-                decoding="async"
-                aria-hidden="true"
-                fetchpriority="high"
-                width="63"
-                height="63"
-              />
-              <div class="header__contact__info">
-                <span>Call Us</span>
-                <span>(00) 112 365 489</span>
-              </div>
-            </li>
-          </ul>
-        </div>
+            <div class="header__info">
+              <span>Mon - Sat 9.00 - 18.00</span>
+              <span>Sunday Closed</span>
+            </div>
+          </li>
+          <li class="header__item">
+            <img
+              src="assets/svgs/Email.svg"
+              alt="icon"
+              decoding="async"
+              aria-hidden="true"
+              fetchpriority="high"
+              width="63"
+              height="63"
+            />
+            <div class="header__info">
+              <span>Email</span>
+              <span>contact@logistics.com</span>
+            </div>
+          </li>
+          <li class="header__item">
+            <img
+              src="assets/svgs/Phone.svg"
+              alt="icon"
+              decoding="async"
+              aria-hidden="true"
+              fetchpriority="high"
+              width="63"
+              height="63"
+            />
+            <div class="header__info">
+              <span>Call Us</span>
+              <span>(00) 112 365 489</span>
+            </div>
+          </li>
+        </ul>
       </div>
       <nav class="nav">
-        <div class="nav__mobile__bar">
+        <div class="nav__mobile">
           <a href="#" class="nav__cta">Request Quote</a>
           <ul class="nav__socials nav__socials--tablet">
             <li>
@@ -137,14 +135,14 @@
         </div>
         <div class="nav__content">
           <ul class="nav__pages">
-            <li class="nav__pages__item">
-              <a href="/" class="nav__pages__link">Home</a>
+            <li class="nav__page">
+              <a href="/" class="nav__link">Home</a>
             </li>
-            <li class="nav__pages__item">
-              <a href="/about.html" class="nav__pages__link">About</a>
+            <li class="nav__page">
+              <a href="/about.html" class="nav__link">About</a>
             </li>
-            <li class="nav__pages__item">
-              <a href="/pages.html" class="nav__pages__link">Pages</a
+            <li class="nav__page">
+              <a href="/pages.html" class="nav__link">Pages</a
               ><img
                 src="assets/svgs/Dropdown.svg"
                 alt="open menu"
@@ -154,11 +152,11 @@
                 decoding="async"
               />
             </li>
-            <li class="nav__pages__item">
-              <a href="/project.html" class="nav__pages__link">Project</a>
+            <li class="nav__page">
+              <a href="/project.html" class="nav__link">Project</a>
             </li>
-            <li class="nav__pages__item">
-              <a href="/contact.html" class="nav__pages__link">Contact</a>
+            <li class="nav__page">
+              <a href="/contact.html" class="nav__link">Contact</a>
             </li>
           </ul>
           <div class="nav__right">
@@ -218,34 +216,36 @@
       </nav>
     </header>
     <main class="main">
+      <!-- ============================================ -->
+      <!--                    LANDING                   -->
+      <!-- ============================================ -->
       <section class="home">
-        <div class="home__text-content">
-          <span class="home__text-content__topper"
-            >Logistics & Supply Chain Solutions</span
-          >
-          <h1 class="home__text-content__title">
+        <div class="home__container">
+          <span class="home__topper">Logistics & Supply Chain Solutions</span>
+          <h1 class="home__title">
             Your Gateway <br />to any Destination in the World
           </h1>
-          <p class="home__text-content__paragraph">
+          <p class="home__paragraph">
             In augue ligula, feugiat ut nulla consequat. Ut est lacus, molestie
             in arcu no, iaculis vehicula ipsum. Nunc faucibus, nisl id dapibus
             finibus, enim diam interdum nulla, sed laoreet risus lectus.
           </p>
-          <a href="/about.html" class="home__text-content__cta"
-            ><span class="home__text-content__cta__text">Explore More</span></a
+          <a href="/about.html" class="home__cta"
+            ><span class="home__text">Explore More</span></a
           >
         </div>
       </section>
+      <!-- ============================================ -->
+      <!--                    SERVICES                  -->
+      <!-- ============================================ -->
       <section class="services">
-        <div class="services__text-content">
-          <span class="services__text-content__topper">What We Do</span>
-          <h2 class="services__text-content__title">
-            Safe & Reliable Cargo Solutions
-          </h2>
+        <div class="services__wrapper">
+          <span class="services__topper">What We Do</span>
+          <h2 class="services__title">Safe & Reliable Cargo Solutions</h2>
         </div>
         <div class="services__container">
           <div class="services__service">
-            <div class="services__service__image__container">
+            <div class="services__image">
               <img
                 src="/assets/svgs/Boat.svg"
                 alt=""
@@ -254,19 +254,18 @@
                 aria-hidden="true"
                 width="52"
                 height="56"
-                class="services__service__image"
               />
             </div>
-            <div class="services__service__text-content">
-              <h3 class="services__service__title">Sea Transport Services</h3>
-              <p class="services__service__paragraph">
+            <div class="services__content">
+              <h3 class="services__subtitle">Sea Transport Services</h3>
+              <p class="services__paragraph">
                 Following the quality of our service thus having gained trust of
                 our many clients.
               </p>
             </div>
           </div>
           <div class="services__service">
-            <div class="services__service__image__container">
+            <div class="services__image">
               <img
                 src="/assets/svgs/Drawers.svg"
                 alt=""
@@ -275,19 +274,18 @@
                 aria-hidden="true"
                 width="57"
                 height="46"
-                class="services__service__image"
               />
             </div>
-            <div class="services__service__text-content">
-              <h3 class="services__service__title">Warehousing Services</h3>
-              <p class="services__service__paragraph">
+            <div class="services__content">
+              <h3 class="services__subtitle">Warehousing Services</h3>
+              <p class="services__paragraph">
                 Following the quality of our service thus having gained trust of
                 our many clients.
               </p>
             </div>
           </div>
           <div class="services__service">
-            <div class="services__service__image__container">
+            <div class="services__image">
               <img
                 src="/assets/svgs/Airplane.svg"
                 alt=""
@@ -296,19 +294,18 @@
                 aria-hidden="true"
                 width="76"
                 height="66"
-                class="services__service__image"
               />
             </div>
-            <div class="services__service__text-content">
-              <h3 class="services__service__title">Air Fright Services</h3>
-              <p class="services__service__paragraph">
+            <div class="services__content">
+              <h3 class="services__subtitle">Air Fright Services</h3>
+              <p class="services__paragraph">
                 Following the quality of our service thus having gained trust of
                 our many clients.
               </p>
             </div>
           </div>
           <div class="services__service">
-            <div class="services__service__image__container">
+            <div class="services__image">
               <img
                 src="/assets/svgs/Truck.svg"
                 alt=""
@@ -317,16 +314,90 @@
                 aria-hidden="true"
                 width="62"
                 height="62"
-                class="services__service__image"
               />
             </div>
-            <div class="services__service__text-content">
-              <h3 class="services__service__title">Local Shipping Services</h3>
-              <p class="services__service__paragraph">
+            <div class="services__content">
+              <h3 class="services__subtitle">Local Shipping Services</h3>
+              <p class="services__paragraph">
                 Following the quality of our service thus having gained trust of
                 our many clients.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- ============================================ -->
+      <!--                    ABOUT                   -->
+      <!-- ============================================ -->
+      <section class="about">
+        <picture>
+          <source
+            srcset="/assets/imgs/Cargo-160.webp"
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="/assets/imgs/Cargo-160.jpg"
+            media="(max-width: 767px)"
+            type="image/jpg"
+          />
+          <source
+            srcset="/assets/imgs/Cargo.png"
+            media="/assets/imgs/Cargo.png"
+            type="image/png"
+          />
+          <img
+            src="/assets/imgs/Cargo.webp"
+            alt=""
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+            width="1920"
+            height="504"
+            class="about__background"
+          />
+        </picture>
+        <div class="about__content">
+          <div class="about__container">
+            <div class="about__left">
+              <span class="about__topper">Why Us</span>
+              <h2 class="about__title">
+                We provide full range global logistics solution
+              </h2>
+              <p class="about__paragraph">
+                Leverage agile frameworks to provide a robust synopsis for
+                strategy foster collaborative thinking to further the overall
+                value proposition.
+              </p>
+              <p class="about__paragraph">
+                Organically grow the holistic world view of disruptive
+                innovation via workplace diversity and empowerment.
+              </p>
+              <div class="about__feature">
+                <img
+                  src="/assets/svgs/Box.svg"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden="true"
+                  width="58"
+                  height="58"
+                />
+                <h3 class="">Delivery on Time</h3>
+              </div>
+              <div class="about__feature">
+                <img
+                  src="/assets/svgs/Money.svg"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden="true"
+                  width="58"
+                  height="58"
+                />
+                <h3 class="">Optimized Travel Cost</h3>
+              </div>
+            </div>
+            <div class="about__right"></div>
           </div>
         </div>
       </section>

@@ -4,7 +4,15 @@
     max-width: var(--headerMaxContent);
     padding-left: 0;
     padding-right: 0;
-    margin: 0 auto;
+    margin: $margin;
+  }
+}
+
+@mixin textContainer($padding: 0 1.25rem, $margin: 0 auto) {
+  padding: $padding;
+  margin: $margin;
+  @media (min-width: 1200px) {
+    max-width: var(--headerMaxContent);
   }
 }
 
