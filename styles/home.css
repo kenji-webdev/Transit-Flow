@@ -99,6 +99,15 @@ button {
   font-weight: 700;
   src: url("../assets/fonts/krub-v9-latin-700.woff2") format("woff2"), url("../assets/fonts/krub-v9-latin-700.woff") format("woff");
   /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+/* league-spartan-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "League Spartan";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/league-spartan-v10-latin-regular.woff2") format("woff2"), url("../assets/fonts/league-spartan-v10-latin-regular.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 @media only screen and (min-width: 2000px) {
   body,
   html {
@@ -373,13 +382,69 @@ button {
   font-family: "Rubik", sans-serif;
   font-weight: 600;
   line-height: 2.5625rem;
-  color: var(--primary-font-color); }
+  color: var(--primary-font-color);
+  max-width: 29.5rem; }
 .about__paragraph {
   font-weight: 500;
   color: var(--secondary-font-color);
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  max-width: 29.5rem; }
   .about__paragraph:last-of-type {
     margin-bottom: 1.5625rem; }
+.about__feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem; }
+.about__subtitle {
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5625rem;
+  line-height: 1.875rem;
+  color: var(--primary-font-color); }
+.about__image {
+  width: 100%;
+  height: auto;
+  max-width: 21.875rem; }
+.about__stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.25rem; }
+.about__counter {
+  font-size: 3.125rem;
+  font-weight: 600;
+  line-height: 3.6875rem;
+  font-family: "Rubik", sans-serif;
+  color: var(--primary-font-color); }
+.about__packages, .about__clients {
+  margin-bottom: 0.8125rem; }
+.about__packages {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+.about__clients {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+.about__description {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  color: var(--primary-font-color);
+  font-family: "League Spartan", sans-serif; }
+  .about__description::before {
+    content: "";
+    display: block;
+    margin: 1rem auto;
+    width: 17px;
+    height: 17px;
+    background: linear-gradient(94.06deg, #ffb629 -1.21%, #ffda56 58.66%, #ffd7a6 116.84%); }
+.about__image--over {
+  margin-bottom: 0.8125rem; }
+.about__content {
+  padding-bottom: 6.0625rem; }
 
 @media (max-width: 767px) {
   .home {
@@ -403,11 +468,43 @@ button {
     flex-flow: row wrap;
     justify-content: center; }
   .services__service {
-    width: 45%; } }
+    width: 45%; }
+
+  .about__right {
+    position: relative; }
+  .about__image {
+    width: unset;
+    max-width: unset; }
+  .about__image--over {
+    position: absolute;
+    padding: 1.5rem;
+    background: white;
+    top: 237px;
+    left: 0; }
+  .about__stats {
+    margin: 7rem 5.375rem 0 5.375rem;
+    flex-direction: row;
+    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4; }
+  .about__packages, .about__clients {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2.875rem 0rem 2.375rem 0rem;
+    margin-bottom: 0; }
+  .about__packages {
+    padding-right: 1.25rem; }
+  .about__clients {
+    border-left: 1px solid #d4d4d4;
+    padding-left: 1.25rem; }
+  .about__description {
+    display: flex;
+    gap: 1rem;
+    align-items: center; } }
 @media only screen and (min-width: 1024px) {
   .header__contact {
     flex-direction: row; }
-  .header__topbar--content {
+  .header__topbar {
     flex-direction: row;
     justify-content: space-between;
     padding: 2.875rem 1.25rem; }
@@ -446,7 +543,18 @@ button {
     height: 1.1875rem; }
 
   .about__background {
-    height: auto; } }
+    height: auto; }
+  .about__image {
+    width: unset; }
+    .about__image--over {
+      top: 300px; }
+  .about__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5.3125rem 5.375rem; }
+  .about__right {
+    display: flex;
+    flex-direction: column; } }
 @media only screen and (min-width: 1300px) {
   .header__topbar--content {
     flex-direction: row;
@@ -484,6 +592,12 @@ button {
     .services__subtitle {
       text-align: left; }
     .services__paragraph {
-      text-align: left; } }
+      text-align: left; }
+
+  .about__image--over {
+    right: 263px;
+    left: unset; }
+  .about__stats {
+    margin: 7rem 5.375rem 0 5.375rem; } }
 
 /*# sourceMappingURL=home.css.map */
