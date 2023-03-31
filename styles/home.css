@@ -209,6 +209,25 @@ button {
   min-height: calc(100vh - 9.6875rem);
   background-size: cover;
   background-position: 50% 50%; }
+  .home__hover {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .home__blob {
+    content: "";
+    top: 0;
+    right: -32px;
+    position: absolute;
+    overflow: hidden;
+    width: 68px;
+    height: 105.09px;
+    background: white;
+    transform: rotate(23.72deg);
+    border-top-left-radius: 260px;
+    transition: all 0.35s ease-in-out; }
   .home__container {
     padding: 10.8125rem 1.25rem;
     color: white; }
@@ -251,21 +270,9 @@ button {
     line-height: 1.375rem;
     color: #23212a;
     padding: 1.1875rem 3rem;
-    position: absolute;
-    overflow: hidden;
+    position: relative;
     background: linear-gradient(94.06deg, #ffb629 -1.21%, #ffda56 58.66%, #ffd7a6 116.84%); }
-    .home__cta::after {
-      content: "";
-      top: 0;
-      right: -32px;
-      position: absolute;
-      width: 68px;
-      height: 105.09px;
-      background: #fff;
-      transform: rotate(23.72deg);
-      border-top-left-radius: 260px;
-      transition: all 0.35s ease-in-out; }
-    .home__cta:hover::after {
+    .home__cta:hover .home__blob {
       right: 0;
       width: 100%;
       height: 100%;
@@ -446,6 +453,106 @@ button {
 .about__content {
   padding-bottom: 6.0625rem; }
 
+.project {
+  position: relative; }
+  .project__wrapper {
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    @media (min-width: 1200px) {
+      .project__wrapper {
+        max-width: 87%;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 auto; } }
+  .project__background {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+    background: linear-gradient(95deg, #ffb629 -1.19%, #ffda56 57.78%, #ffd7a6 115.08%); }
+  .project__title {
+    color: var(--primary-font-color);
+    font-size: 2.1875rem;
+    font-weight: 600;
+    line-height: 2.5625rem;
+    font-family: "Rubik", sans-serif;
+    text-align: center;
+    margin-bottom: 2.1875rem; }
+  .project__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+    margin-bottom: 4.0625rem; }
+  .project__cta {
+    font-weight: 600;
+    line-height: 1.375rem;
+    color: #fff;
+    padding: 1.1875rem 3rem;
+    position: relative;
+    overflow: hidden;
+    background: var(--secondary-color); }
+    .project__cta:hover .project__blob {
+      right: 0;
+      width: 100%;
+      height: 100%;
+      transform: rotate(0);
+      border-top-left-radius: 0; }
+  .project__work {
+    position: relative;
+    z-index: 1; }
+  .project__image {
+    width: 100%;
+    height: auto;
+    max-width: 20rem; }
+  .project__card {
+    position: relative; }
+  .project__text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 1.5625rem;
+    padding-bottom: 1.25rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(0deg, #091242 14.34%, rgba(60, 60, 60, 0) 43.86%);
+    background-blend-mode: multiply; }
+  .project__subtitle {
+    font-family: "Rubik", sans-serif;
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 500; }
+  .project__description {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffb629; }
+  .project__hover {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .project__blob {
+    content: "";
+    top: 0;
+    right: -32px;
+    position: absolute;
+    overflow: hidden;
+    width: 68px;
+    height: 105.09px;
+    background: #1f2a69;
+    transform: rotate(23.72deg);
+    border-top-left-radius: 260px;
+    transition: all 0.35s ease-in-out; }
+
 @media (max-width: 767px) {
   .home {
     background-image: url("/assets/imgs/Ship-700.webp"); } }
@@ -500,7 +607,11 @@ button {
   .about__description {
     display: flex;
     gap: 1rem;
-    align-items: center; } }
+    align-items: center; }
+
+  .project__container {
+    flex-flow: row wrap;
+    justify-content: center; } }
 @media only screen and (min-width: 1024px) {
   .header__contact {
     flex-direction: row; }
@@ -599,5 +710,8 @@ button {
     left: unset; }
   .about__stats {
     margin: 7rem 5.375rem 0 5.375rem; } }
+@media (min-width: 1600px) {
+  .project__container {
+    flex-flow: row nowrap; } }
 
 /*# sourceMappingURL=home.css.map */
