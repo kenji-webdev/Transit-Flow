@@ -15,3 +15,25 @@ const navLinks = document
       link.classList.add("active");
     }
   });
+
+const reviewContainers = [...document.querySelectorAll(".testimonial__users")];
+const leftController = [
+  ...document.querySelectorAll(".testimonial__arrow--left"),
+];
+const rightController = [
+  ...document.querySelectorAll(".testimonial__arrow--right"),
+];
+
+reviewContainers.forEach((item, i) => {
+  console.log("run");
+  let containerDimensions = item.getBoundingClientRect();
+  let containerWidth = containerDimensions.width;
+
+  leftController[i].addEventListener("click", () => {
+    item.scrollLeft += containerWidth;
+  });
+
+  rightController[i].addEventListener("click", () => {
+    item.scrollLeft -= containerWidth;
+  });
+});

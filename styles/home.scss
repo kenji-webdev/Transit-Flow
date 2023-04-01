@@ -355,6 +355,7 @@
     top: 60%;
     width: 100%;
     height: 50%;
+    min-height: 25rem;
     z-index: -1;
     background: linear-gradient(
       95deg,
@@ -443,6 +444,78 @@
   }
   &__blob {
     @include blob(#1f2a69);
+  }
+}
+
+.testimonial {
+  @include container(17.125rem 1.25rem 6.3125rem 1.25rem);
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+  }
+  &__users {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__quote {
+    display: none;
+  }
+  &__topper {
+    @include topper();
+  }
+  &__title {
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 2.1875rem;
+    line-height: 2.5625rem;
+    color: var(--primary-font-color);
+    margin-bottom: 1.5rem;
+  }
+  &__review {
+    padding: 1.875rem 1.25rem;
+    min-width: 100%;
+    background: #f4f4f4;
+  }
+  &__name {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: var(--secondary-color);
+  }
+  &__role {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--secondary-color);
+  }
+  &__profile {
+  }
+  &__wrapper {
+    display: flex;
+    gap: 0.625rem;
+    margin-bottom: 1.5rem;
+  }
+  &__pfp {
+    border-radius: 50%;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__paragraph {
+    font-size: 1rem;
+    color: var(--secondary-font-color);
+    line-height: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
   }
 }
 
@@ -610,6 +683,43 @@
       flex-direction: column;
     }
   }
+  .testimonial {
+    &__intro {
+      flex-direction: row;
+      margin-bottom: 2.5rem;
+    }
+    &__controller {
+      display: flex;
+      align-items: flex-end;
+      gap: 0.5625rem;
+    }
+    &__users {
+      flex-direction: row;
+      gap: 0;
+    }
+    &__review {
+      min-width: 50%;
+      padding: 3.75rem;
+    }
+    &__profile {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__quote {
+      display: block;
+    }
+    &__title {
+      margin-bottom: 0;
+    }
+    &__review--blue {
+      background: #091242;
+      .testimonial__paragraph,
+      .testimonial__name,
+      .testimonial__role {
+        color: #fff;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1300px) {
@@ -671,6 +781,11 @@
     }
     &__stats {
       margin: 7rem 5.375rem 0 5.375rem;
+    }
+  }
+  .testimonial {
+    &__review {
+      padding: 3.875rem 4.5rem;
     }
   }
 }
