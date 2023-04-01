@@ -557,6 +557,70 @@
   }
 }
 
+.team {
+  @include container($padding: 5.9375rem 1.25rem 6.3125rem 1.25rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    @include title($margin: 0 0 2.5rem 0);
+  }
+  &__topper {
+    @include topper();
+  }
+  &__icon--invert {
+    filter: invert(1);
+  }
+  &__member {
+    max-width: 100%;
+    vertical-align: bottom;
+  }
+  &__card {
+    position: relative;
+  }
+  &__icon {
+    vertical-align: bottom;
+  }
+  &__profile {
+    background: var(--primary-font-color);
+    padding: 1.875rem 1.25rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+  }
+  &__socials {
+    position: absolute;
+    right: 0;
+    bottom: 6.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5625rem;
+    width: fit-content;
+    background: linear-gradient(
+      94.06deg,
+      #ffb629 -1.21%,
+      #ffda56 58.66%,
+      #ffd7a6 116.84%
+    );
+    padding: 1.25rem 1.0625rem;
+  }
+  &__name {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: #fff;
+  }
+  &__role {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #fff;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .home {
     background-image: url("/assets/imgs/Ship-700.webp");
@@ -787,6 +851,13 @@
       justify-content: center;
     }
   }
+  .team {
+    &__container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
 }
 
 @media only screen and (min-width: 1300px) {
@@ -862,6 +933,7 @@
       padding: 8.875rem 0 9.0625rem 8.75rem;
       display: flex;
       align-items: center;
+      margin-bottom: 0;
     }
     &__content {
       padding: 12.5rem 0 12.5rem 10.125rem;
@@ -869,6 +941,18 @@
     &__airplane,
     &__tag {
       margin-left: 6.8125rem;
+    }
+  }
+  .team {
+    &__container {
+      gap: 3.375rem;
+    }
+    &__profile {
+      padding: 2.625rem 0 1.25rem 2.125rem;
+    }
+    &__socials {
+      // 31px = half of container height
+      bottom: calc(6.75rem - 31px);
     }
   }
 }
