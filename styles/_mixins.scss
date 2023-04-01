@@ -72,3 +72,20 @@
   border-top-left-radius: 260px;
   transition: all 0.35s ease-in-out;
 }
+
+@mixin title($margin: 0 0 2.1875rem 0) {
+  color: var(--primary-font-color);
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 2.5625rem;
+  font-family: "Rubik", sans-serif;
+  margin: $margin;
+}
+
+@mixin paragraph($margin: 0 0 2rem 0) {
+  font-size: 1rem;
+  color: var(--secondary-font-color);
+  line-height: 1.5rem;
+  font-weight: 500;
+  margin: $margin;
+}

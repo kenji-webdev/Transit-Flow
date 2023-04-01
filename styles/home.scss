@@ -60,6 +60,10 @@
       z-index: 100;
     }
   }
+  &__dropdown {
+    transition: 0.2s;
+    margin-left: 0.3125rem;
+  }
   &__pages {
     display: flex;
     flex-direction: column;
@@ -70,6 +74,15 @@
     font-weight: 500;
     height: 100%;
     line-height: 1.1875rem;
+  }
+  &__page--dropdown {
+    display: flex;
+    align-items: center;
+    &:hover {
+      .nav__dropdown {
+        transform: rotate(180deg);
+      }
+    }
   }
   &__link {
     height: 100%;
@@ -191,9 +204,7 @@
     @include topper();
   }
   &__title {
-    font-size: 2.1875rem;
-    font-family: "Rubik", sans-serif;
-    font-weight: 600;
+    @include title($margin: 0);
     max-width: 18.375rem;
   }
   &__container {
@@ -220,9 +231,7 @@
     text-align: center;
   }
   &__paragraph {
-    font-weight: 500;
-    line-height: 1.5rem;
-    color: var(--secondary-font-color);
+    @include paragraph($margin: 0 0 0.8125rem 0);
     text-align: center;
   }
 }
@@ -252,11 +261,7 @@
     margin-bottom: 0.75rem;
   }
   &__title {
-    font-size: 2.1875rem;
-    font-family: "Rubik", sans-serif;
-    font-weight: 600;
-    line-height: 2.5625rem;
-    color: var(--primary-font-color);
+    @include title($margin: 0 0 0.75rem 0);
     max-width: 29.5rem;
   }
   &__paragraph {
@@ -365,13 +370,8 @@
     );
   }
   &__title {
-    color: var(--primary-font-color);
-    font-size: 2.1875rem;
-    font-weight: 600;
-    line-height: 2.5625rem;
-    font-family: "Rubik", sans-serif;
+    @include title();
     text-align: center;
-    margin-bottom: 2.1875rem;
   }
   &__container {
     display: flex;
@@ -470,12 +470,7 @@
     @include topper();
   }
   &__title {
-    font-family: "Rubik", sans-serif;
-    font-weight: 600;
-    font-size: 2.1875rem;
-    line-height: 2.5625rem;
-    color: var(--primary-font-color);
-    margin-bottom: 1.5rem;
+    @include title($margin: 0 0 1.5rem 0);
   }
   &__review {
     padding: 1.875rem 1.25rem;
@@ -511,15 +506,58 @@
     justify-content: center;
   }
   &__paragraph {
-    font-size: 1rem;
-    color: var(--secondary-font-color);
-    line-height: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 2rem;
+    @include paragraph();
   }
 }
 
-@media (max-width: 767px) {
+.why {
+  background: var(--tertiary-color);
+  &__image {
+    padding: 5rem 1.25rem 0 1.25rem;
+    background: var(--secondary-color);
+    margin-bottom: 1.125rem;
+  }
+  &__airplane,
+  &__tag {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    margin-bottom: -1rem;
+  }
+  &__content {
+    padding-top: 1.875rem;
+    @include textContainer();
+  }
+  &__topper {
+    @include topper();
+    margin-top: 1.125rem;
+  }
+  &__title {
+    @include title($margin: 0 0 1.125rem 0);
+  }
+  &__paragraph {
+    font-family: "Krub";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.125rem;
+  }
+  &__feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1.125rem;
+  }
+  &__subtitle {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: var(--primary-font-color);
+  }
+}
+
+@media only screen and (max-width: 767px) {
   .home {
     background-image: url("/assets/imgs/Ship-700.webp");
   }
@@ -528,6 +566,11 @@
 @media only screen and (min-width: 768px) {
   .home {
     background-image: url("/assets/imgs/Ship.webp");
+  }
+  .header {
+    &__contact {
+      flex-direction: row;
+    }
   }
   .nav {
     &__hamburger {
@@ -601,13 +644,29 @@
       justify-content: center;
     }
   }
+  .why {
+    &__features {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__feature {
+      width: 50%;
+    }
+    &__wrapper {
+      position: relative;
+    }
+    &__tag {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   .header {
-    &__contact {
-      flex-direction: row;
-    }
     &__topbar {
       flex-direction: row;
       justify-content: space-between;
@@ -650,7 +709,6 @@
     }
     &__pages {
       flex-direction: row;
-      gap: 1.875rem;
     }
     &__page {
       &:not(:first-child) {
@@ -661,6 +719,9 @@
           height: 1.1875rem;
         }
       }
+    }
+    &__link {
+      padding-right: 1.875rem;
     }
   }
   .about {
@@ -718,6 +779,12 @@
       .testimonial__role {
         color: #fff;
       }
+    }
+  }
+  .why {
+    &__wrapper {
+      display: flex;
+      justify-content: center;
     }
   }
 }
@@ -788,12 +855,33 @@
       padding: 3.875rem 4.5rem;
     }
   }
+  .why {
+    display: flex;
+    &__image {
+      min-width: 50%;
+      padding: 8.875rem 0 9.0625rem 8.75rem;
+      display: flex;
+      align-items: center;
+    }
+    &__content {
+      padding: 12.5rem 0 12.5rem 10.125rem;
+    }
+    &__airplane,
+    &__tag {
+      margin-left: 6.8125rem;
+    }
+  }
 }
 
-@media (min-width: 1600px) {
+@media only screen and (min-width: 1600px) {
   .project {
     &__container {
       flex-flow: row nowrap;
+    }
+  }
+  .why {
+    &__content {
+      padding-right: 15.3125rem;
     }
   }
 }
