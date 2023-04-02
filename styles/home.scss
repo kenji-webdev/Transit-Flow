@@ -573,6 +573,7 @@
   }
   &__member {
     max-width: 100%;
+    height: auto;
     vertical-align: bottom;
   }
   &__card {
@@ -618,6 +619,96 @@
     font-size: 1rem;
     line-height: 1.5rem;
     color: #fff;
+  }
+}
+
+.contact {
+  background: var(--secondary-color);
+  &__wrapper {
+    @include textContainer($padding: 8.9375rem 1.25rem 4.375rem 1.25rem);
+  }
+  &__info {
+    @extend .header__contact;
+    gap: 1.875rem;
+    margin-bottom: 2rem;
+  }
+  &__item {
+    @extend .header__item;
+  }
+  &__details {
+    @extend .header__info;
+  }
+  &__topper {
+    @include topper();
+    margin: 0 0 0.8125rem 0;
+    color: white;
+  }
+  &__title {
+    @include title($margin: 0 0 0.1875rem 0);
+    color: white;
+  }
+  &__paragraph {
+    @include paragraph();
+    color: white;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.9375rem;
+    margin-bottom: 1.9375rem;
+  }
+  &__input,
+  &__textarea {
+    height: 9.625rem;
+    &::placeholder {
+      font-size: 1.25rem;
+      line-height: 1.125rem;
+      font-weight: 400;
+      font-family: "League Spartan", sans-serif;
+    }
+  }
+  &__input {
+    width: 100%;
+    padding: 1.3125rem 0 1.3125rem 1.875rem;
+    height: 3.75rem;
+    border: 1px solid #4e5683;
+    background: transparent;
+    color: white;
+    &::placeholder {
+      color: white;
+    }
+  }
+  &__submit {
+    @include cta();
+    padding: 1.1875rem 2.125rem;
+  }
+  &__textarea {
+    min-width: 100%;
+    padding: 1.3125rem 0 1.3125rem 1.875rem;
+    border: 1px solid #4e5683;
+    background: transparent;
+    margin-bottom: 1.9375rem;
+    color: white;
+    &::placeholder {
+      color: white;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__clients {
+    @include container();
+    padding-bottom: 8.9375rem;
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
   }
 }
 
@@ -725,6 +816,31 @@
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
+    }
+  }
+  .contact {
+    &__group {
+      display: flex;
+      flex-direction: row;
+      gap: 1.9375rem;
+      margin-bottom: 1.9375rem;
+    }
+    &__textarea {
+      padding-left: 1.5rem;
+      padding-bottom: 7.1875rem;
+      width: 100%;
+      min-width: unset;
+    }
+    &__submit {
+      display: block;
+    }
+    &__paragraph {
+      max-width: 28.125rem;
+    }
+    &__clients {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
     }
   }
 }
@@ -858,6 +974,35 @@
       justify-content: center;
     }
   }
+  .contact {
+    &__container {
+      margin-right: 5.5rem;
+    }
+    &__wrapper {
+      display: flex;
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
+    &__container {
+      max-width: 22.0625rem;
+      width: 100%;
+    }
+    &__input {
+      max-width: 22.8125rem;
+    }
+    &__textarea {
+      max-width: 47.375rem;
+    }
+    &__clients {
+      flex-flow: row nowrap;
+    }
+  }
+  #contact__form {
+    padding-top: 2.625rem;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 1300px) {
@@ -953,6 +1098,15 @@
     &__socials {
       // 31px = half of container height
       bottom: calc(6.75rem - 31px);
+    }
+  }
+  .contact {
+    &__wrapper {
+      display: flex;
+      padding: 8.9735rem 0 4.375rem 0;
+    }
+    &__info {
+      gap: 1.875rem;
     }
   }
 }
