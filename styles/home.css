@@ -19,6 +19,10 @@
 ul {
   list-style: none; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 a {
   text-decoration: none;
   color: inherit; }
@@ -892,6 +896,95 @@ button {
     height: auto;
     vertical-align: bottom; }
 
+.blog {
+  padding: 6.125rem 1.25rem 6.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media (min-width: 1200px) {
+    .blog {
+      max-width: var(--headerMaxContent);
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0 auto; } }
+  .blog__link:hover {
+    color: var(--primary-color); }
+  .blog__topper {
+    display: inline-flex;
+    min-height: 1.1875rem;
+    gap: 0.5625rem;
+    padding: 0.1875rem 0.5625rem;
+    font-size: 0.875rem;
+    font-family: "Rubik", sans-serif;
+    background: rgba(4, 28, 55, 0.5);
+    align-items: center;
+    position: relative;
+    margin-bottom: 0.5rem; }
+    .blog__topper::before {
+      content: "";
+      position: absolute;
+      left: -0.25rem;
+      display: inline-block;
+      background: linear-gradient(94.06deg, #ffb629 -1.21%, #ffda56 58.66%, #ffd7a6 116.84%);
+      width: 0.25rem;
+      height: 1.4375rem; }
+  .blog__title {
+    color: var(--primary-font-color);
+    font-size: 2.1875rem;
+    font-weight: 600;
+    line-height: 2.5625rem;
+    font-family: "Rubik", sans-serif;
+    margin: 0 0 2.1875rem 0;
+    margin-bottom: 2.4375rem; }
+  .blog__article {
+    padding-top: 1.8125rem;
+    padding-bottom: 2.1875rem; }
+  .blog__more {
+    display: none; }
+  .blog__image {
+    vertical-align: bottom;
+    margin-bottom: 1.25rem; }
+  .blog__day {
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 2.9375rem;
+    color: var(--primary-font-color); }
+  .blog__month {
+    font-size: 1rem;
+    color: var(--secondary-font-color);
+    line-height: 1.5rem;
+    font-weight: 500;
+    margin: unset; }
+  .blog__wrapper {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.25rem; }
+  .blog__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .blog__subtitle {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5625rem;
+    line-height: 1.875rem;
+    color: var(--primary-font-color);
+    font-weight: 400;
+    margin-bottom: 1rem; }
+  .blog__paragraph {
+    font-size: 1rem;
+    color: var(--secondary-font-color);
+    line-height: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 1.125rem 0; }
+  .blog__list {
+    font-weight: 500;
+    line-height: 1.6875rem;
+    color: var(--primary-font-color);
+    margin-bottom: 1.5rem;
+    list-style: disc;
+    margin-left: 1.25rem; }
+
 @media only screen and (max-width: 767px) {
   .home {
     background-image: url("/assets/imgs/Ship-700.webp"); } }
@@ -1096,7 +1189,44 @@ button {
 
   #contact__form {
     padding-top: 2.625rem;
-    width: 100%; } }
+    width: 100%; }
+
+  .blog__article {
+    display: flex;
+    border-top: 1px solid #d6d6d6; }
+  .blog__container {
+    display: flex; }
+  .blog__wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0 1.25rem;
+    margin-bottom: 0; }
+  .blog__content {
+    max-width: 22.75rem;
+    padding-left: 1.8125rem;
+    border-left: 1px solid #d6d6d6; }
+  .blog__image {
+    margin-bottom: 0; }
+  .blog__picture {
+    position: relative; }
+    .blog__picture:hover .blog__more {
+      visibility: visible; }
+  .blog__picture--first .blog__more {
+    height: calc(100% - 5rem); }
+  .blog__more {
+    position: absolute;
+    display: block;
+    visibility: hidden;
+    width: calc(100% - 5rem);
+    margin: 2.5rem;
+    height: calc(100% - 6.5rem);
+    background: rgba(28, 31, 53, 0.91);
+    left: 0;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; } }
 @media only screen and (min-width: 1300px) {
   .header__topbar--content {
     flex-direction: row;

@@ -712,6 +712,75 @@
   }
 }
 
+.blog {
+  @include container($padding: 6.125rem 1.25rem 6.25rem 1.25rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__link {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+  &__topper {
+    @include topper();
+  }
+  &__title {
+    @include title();
+    margin-bottom: 2.4375rem;
+  }
+  &__article {
+    padding-top: 1.8125rem;
+    padding-bottom: 2.1875rem;
+  }
+  &__more {
+    display: none;
+  }
+  &__image {
+    vertical-align: bottom;
+    margin-bottom: 1.25rem;
+  }
+  &__day {
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 2.9375rem;
+    color: var(--primary-font-color);
+  }
+  &__month {
+    @include paragraph($margin: unset);
+  }
+  &__wrapper {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  &__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__subtitle {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5625rem;
+    line-height: 1.875rem;
+    color: var(--primary-font-color);
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  &__paragraph {
+    @include paragraph($margin: 0 0 1.125rem 0);
+  }
+  &__list {
+    font-weight: 500;
+    line-height: 1.6875rem;
+    color: var(--primary-font-color);
+    margin-bottom: 1.5rem;
+    list-style: disc;
+    margin-left: 1.25rem;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .home {
     background-image: url("/assets/imgs/Ship-700.webp");
@@ -1002,6 +1071,57 @@
   #contact__form {
     padding-top: 2.625rem;
     width: 100%;
+  }
+  .blog {
+    &__article {
+      display: flex;
+      border-top: 1px solid #d6d6d6;
+    }
+    &__container {
+      display: flex;
+    }
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      padding: 0 1.25rem;
+      margin-bottom: 0;
+    }
+    &__content {
+      max-width: 22.75rem;
+      padding-left: 1.8125rem;
+      border-left: 1px solid #d6d6d6;
+    }
+    &__image {
+      margin-bottom: 0;
+    }
+    &__picture {
+      position: relative;
+      &:hover {
+        .blog__more {
+          visibility: visible;
+        }
+      }
+    }
+    &__picture--first {
+      .blog__more {
+        height: calc(100% - 5rem);
+      }
+    }
+    &__more {
+      position: absolute;
+      display: block;
+      visibility: hidden;
+      width: calc(100% - 5rem);
+      margin: 2.5rem;
+      height: calc(100% - 6.5rem);
+      background: rgba(28, 31, 53, 0.91);
+      left: 0;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 
