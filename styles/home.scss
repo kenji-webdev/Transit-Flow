@@ -3,6 +3,12 @@
 
 .header {
   background-color: var(--secondary-color);
+  &__logo {
+    width: 13.125rem;
+  }
+  &__icon {
+    width: 3.9735rem;
+  }
   &__topbar {
     max-width: var(--headerMaxContent);
     margin: 0 auto;
@@ -37,6 +43,10 @@
   position: absolute;
   z-index: 1;
   width: 100%;
+  &__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
   &__content {
     max-width: var(--headerMaxContent);
     margin: 0 auto;
@@ -58,17 +68,19 @@
     &.open {
       height: 24.25rem;
       z-index: 100;
+      padding-bottom: 1rem;
     }
   }
-  &__dropdown {
+  &__dropdown--icon {
     transition: 0.2s;
     margin-left: 0.3125rem;
   }
   &__pages {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
+    padding-left: 1rem;
   }
   &__page {
     font-weight: 500;
@@ -77,9 +89,10 @@
   }
   &__page--dropdown {
     display: flex;
+    flex-direction: column;
     align-items: center;
     &:hover {
-      .nav__dropdown {
+      .nav__dropdown--icon {
         transform: rotate(180deg);
       }
     }
@@ -140,11 +153,11 @@
   &__blob {
     content: "";
     top: 0;
-    right: -32px;
+    right: -2rem;
     position: absolute;
     overflow: hidden;
-    width: 68px;
-    height: 105.09px;
+    width: 4.25rem;
+    height: 6.5625rem;
     background: white;
     transform: rotate(23.72deg);
     border-top-left-radius: 260px;
@@ -200,8 +213,21 @@
   @include container(6rem 1.25rem 7.5625rem 1.25rem);
   display: flex;
   flex-flow: column nowrap;
+  &__boat {
+    width: 3.25rem;
+  }
+  &__drawers {
+    width: 3.5625rem;
+  }
+  &__airplane {
+    width: 4.75rem;
+  }
+  &__truck {
+    width: 3.875rem;
+  }
   &__topper {
     @include topper();
+    background: rgba(232, 232, 232, 0.5);
   }
   &__title {
     @include title($margin: 0);
@@ -237,10 +263,15 @@
 }
 
 .about {
+  &__icon {
+    width: 3.625rem;
+    height: 3.625rem;
+  }
   &__background {
     width: 100%;
     height: 10rem;
     object-fit: cover;
+    vertical-align: bottom;
   }
   &__content {
     @include container($margin: -5rem auto 0 auto);
@@ -259,6 +290,7 @@
   &__topper {
     @include topper();
     margin-bottom: 0.75rem;
+    background: rgba(232, 232, 232, 0.5);
   }
   &__title {
     @include title($margin: 0 0 0.75rem 0);
@@ -286,9 +318,12 @@
     color: var(--primary-font-color);
   }
   &__image {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    max-width: 21.875rem;
+    width: 28.8125rem;
+    &--over {
+      width: 100%;
+    }
   }
   &__stats {
     display: flex;
@@ -329,8 +364,8 @@
       content: "";
       display: block;
       margin: 1rem auto;
-      width: 17px;
-      height: 17px;
+      width: 1.0625rem;
+      height: 1.0625rem;
       background: linear-gradient(
         94.06deg,
         #ffb629 -1.21%,
@@ -396,9 +431,8 @@
     z-index: 1;
   }
   &__image {
-    width: 100%;
+    width: 20rem;
     height: auto;
-    max-width: 20rem;
   }
   &__card {
     position: relative;
@@ -468,6 +502,7 @@
   }
   &__topper {
     @include topper();
+    background: rgba(232, 232, 232, 0.5);
   }
   &__title {
     @include title($margin: 0 0 1.5rem 0);
@@ -498,6 +533,7 @@
     margin-bottom: 1.5rem;
   }
   &__pfp {
+    width: 5.6875rem;
     border-radius: 50%;
   }
   &__info {
@@ -524,6 +560,16 @@
     vertical-align: bottom;
     margin-bottom: -1rem;
   }
+  &__icon {
+    width: 3.9375rem;
+    height: 3.9375rem;
+  }
+  &__airplane {
+    width: 58.0625rem;
+  }
+  &__tag {
+    width: 26.0625rem;
+  }
   &__content {
     padding-top: 1.875rem;
     @include textContainer();
@@ -531,6 +577,7 @@
   &__topper {
     @include topper();
     margin-top: 1.125rem;
+    background: rgba(232, 232, 232, 0.5);
   }
   &__title {
     @include title($margin: 0 0 1.125rem 0);
@@ -567,20 +614,24 @@
   }
   &__topper {
     @include topper();
+    background: rgba(232, 232, 232, 0.5);
+  }
+  &__icon {
+    width: 1.375rem;
+    height: 1.0625rem;
+    vertical-align: bottom;
   }
   &__icon--invert {
     filter: invert(1);
   }
   &__member {
+    width: 22.75rem;
     max-width: 100%;
     height: auto;
     vertical-align: bottom;
   }
   &__card {
     position: relative;
-  }
-  &__icon {
-    vertical-align: bottom;
   }
   &__profile {
     background: var(--primary-font-color);
@@ -624,6 +675,10 @@
 
 .contact {
   background: var(--secondary-color);
+  &__icon {
+    width: 3.9375rem;
+    height: 3.9375rem;
+  }
   &__wrapper {
     @include textContainer($padding: 8.9375rem 1.25rem 4.375rem 1.25rem);
   }
@@ -706,7 +761,7 @@
     padding-bottom: 8.9375rem;
   }
   &__image {
-    width: 100%;
+    width: 18.8125rem;
     height: auto;
     vertical-align: bottom;
   }
@@ -717,6 +772,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  &__icon {
+    width: 3.1875rem;
+    height: 3.5rem;
+  }
   &__link {
     &:hover {
       color: var(--primary-color);
@@ -724,6 +783,7 @@
   }
   &__topper {
     @include topper();
+    background: rgba(232, 232, 232, 0.5);
   }
   &__title {
     @include title();
@@ -737,6 +797,7 @@
     display: none;
   }
   &__image {
+    width: 28.3125rem;
     vertical-align: bottom;
     margin-bottom: 1.25rem;
   }
@@ -781,6 +842,88 @@
   }
 }
 
+.footer {
+  background: #091242;
+  &__social {
+    width: 1.25rem;
+  }
+  &__icon {
+    width: 3.9375rem;
+  }
+  &__faded {
+    min-height: 7.375rem;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  &__logo {
+    width: 13.125rem;
+    padding-bottom: calc(2.75rem - 0.614375rem);
+  }
+  &__content {
+    padding: 2.6875rem 1.25rem;
+    // desktop 19.5rem;
+    margin-top: -7.375rem;
+  }
+  &__paragraph {
+    margin-top: 2.4375rem;
+    max-width: 19.9375rem;
+    @include paragraph($margin: 2.4375rem 0 2.0625rem 0, $color: #e8e8e8);
+  }
+  &__contact {
+    @extend .header__contact;
+    gap: 1.875rem;
+    margin-bottom: 2.0625rem;
+  }
+  &__title {
+    font-size: 1.5625rem;
+    line-height: 1.875rem;
+    font-weight: 500;
+    font-family: "Rubik", sans-serif;
+    color: #fff;
+    padding: 2.75rem 0 2.75rem 0;
+  }
+  &__item {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 2.5em;
+    color: #fff;
+  }
+  &__sbs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.9375rem;
+  }
+  &__socials {
+    display: flex;
+    align-content: center;
+    gap: 1.5rem;
+  }
+  &__credits {
+    border-top: 1px solid #4e5683;
+    padding: 0.9735rem 1.25rem;
+  }
+  &__copyright {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 2.5rem;
+  }
+  &__item--faded {
+    color: #8388a7;
+  }
+  &__input {
+    @extend .contact__input;
+    &::placeholder {
+      color: #8388a7;
+    }
+  }
+  &__wrapper {
+    &--nav {
+      display: flex;
+      gap: 1.25rem;
+    }
+  }
+}
 @media only screen and (max-width: 767px) {
   .home {
     background-image: url("/assets/imgs/Ship-700.webp");
@@ -825,14 +968,16 @@
       position: relative;
     }
     &__image {
-      width: unset;
       max-width: unset;
+      &--over {
+        width: unset;
+      }
     }
     &__image--over {
       position: absolute;
       padding: 1.5rem;
       background: white;
-      top: 237px;
+      top: 14.8125rem;
       left: 0;
     }
     &__stats {
@@ -912,6 +1057,47 @@
       justify-content: center;
     }
   }
+  .footer {
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 0;
+      padding-left: 0;
+    }
+    &__contact {
+      flex-direction: column;
+      padding-left: 2.6875rem;
+    }
+    &__container {
+      padding-top: 2.6875rem;
+      padding-left: 2.6875rem;
+      background: #091242;
+    }
+    &__wrapper {
+      width: 50%;
+      &--nav {
+        gap: 8.75rem;
+        padding: 2.6875rem 2.6875rem 0 2.6875rem;
+      }
+    }
+    &__form {
+      padding-left: 2.6875rem;
+    }
+    &__title {
+      padding-top: 0;
+    }
+    &__list {
+      margin-top: 2.4375rem;
+    }
+    &__group {
+      display: flex;
+      gap: 1.25rem;
+    }
+    &__sbs {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -961,7 +1147,7 @@
     }
     &__page {
       &:not(:first-child) {
-        ::before {
+        > ::before {
           content: "";
           border-left: 1px solid rgba(255, 255, 255, 0.2);
           padding-left: 1.875rem;
@@ -976,11 +1162,11 @@
   .about {
     &__background {
       height: auto;
+      vertical-align: bottom;
     }
     &__image {
-      width: unset;
       &--over {
-        top: 300px;
+        top: 18.75rem;
       }
     }
     &__container {
@@ -994,6 +1180,10 @@
     }
   }
   .testimonial {
+    &__right,
+    &__left {
+      width: 2.75rem;
+    }
     &__intro {
       flex-direction: row;
       margin-bottom: 2.5rem;
@@ -1134,6 +1324,7 @@
     }
     &__contact {
       gap: 2.4375rem;
+      margin-bottom: 0;
     }
   }
   .nav {
@@ -1179,7 +1370,7 @@
   }
   .about {
     &__image--over {
-      right: 263px;
+      right: 16.4375rem;
       left: unset;
     }
     &__stats {
@@ -1216,8 +1407,8 @@
       padding: 2.625rem 0 1.25rem 2.125rem;
     }
     &__socials {
-      // 31px = half of container height
-      bottom: calc(6.75rem - 31px);
+      // 1.9375rem = half of container height
+      bottom: calc(6.75rem - 1.9375rem);
     }
   }
   .contact {
@@ -1228,6 +1419,34 @@
     &__info {
       gap: 1.875rem;
     }
+  }
+  .footer {
+    &__content {
+      //padding: 0 0 2.6875rem 19.5rem;
+      max-width: 75rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__container {
+      max-width: 26.6875rem;
+    }
+    &__wrapper {
+      width: unset;
+      &--credits {
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 2.6875rem;
+        max-width: 75rem;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &__form {
+      padding-top: 2.6875rem;
+    }
+  }
+  #footer__form {
+    padding-top: 2.5625rem;
   }
 }
 
