@@ -19,6 +19,7 @@
             fetchpriority="high"
             width="210"
             height="36"
+            class="header__logo"
           />
         </a>
         <ul class="header__contact">
@@ -31,6 +32,7 @@
               fetchpriority="high"
               width="63"
               height="63"
+              class="header__icon"
             />
             <div class="header__info">
               <span>Mon - Sat 9.00 - 18.00</span>
@@ -46,6 +48,7 @@
               fetchpriority="high"
               width="63"
               height="63"
+              class="header__icon"
             />
             <div class="header__info">
               <span>Email</span>
@@ -61,6 +64,7 @@
               fetchpriority="high"
               width="63"
               height="63"
+              class="header__icon"
             />
             <div class="header__info">
               <span>Call Us</span>
@@ -72,6 +76,7 @@
       <nav class="nav">
         <div class="nav__mobile">
           <a href="#" class="nav__cta">Request Quote</a>
+          <!-- Only shows for tablet -->
           <ul class="nav__socials nav__socials--tablet">
             <li>
               <a href="#"
@@ -83,6 +88,7 @@
                   fetchpriority="high"
                   width="20"
                   height="20"
+                  class="nav__icon"
               /></a>
             </li>
             <li>
@@ -95,6 +101,7 @@
                   fetchpriority="high"
                   width="20"
                   height="20"
+                  class="nav__icon"
               /></a>
             </li>
             <li>
@@ -107,6 +114,7 @@
                   fetchpriority="high"
                   width="20"
                   height="20"
+                  class="nav__icon"
               /></a>
             </li>
             <li>
@@ -119,6 +127,7 @@
                   fetchpriority="high"
                   width="20"
                   height="20"
+                  class="nav__icon"
               /></a>
             </li>
           </ul>
@@ -142,8 +151,8 @@
               <a href="/about.html" class="nav__link">About</a>
             </li>
             <li class="nav__page nav__page--dropdown">
-              <a href="/pages.html" class="nav__link"
-                >Pages
+              <button class="nav__link" id="dropdown-button">
+                Pages
                 <img
                   src="assets/svgs/Dropdown.svg"
                   alt="open menu"
@@ -151,8 +160,9 @@
                   height="10"
                   fetchpriority="high"
                   decoding="async"
-                  class="nav__dropdown"
-              /></a>
+                  class="nav__dropdown--icon"
+                />
+              </button>
             </li>
             <li class="nav__page">
               <a href="/project.html" class="nav__link">Project</a>
@@ -173,6 +183,7 @@
                     fetchpriority="high"
                     width="20"
                     height="20"
+                    class="nav__icon"
                 /></a>
               </li>
               <li>
@@ -185,6 +196,7 @@
                     fetchpriority="high"
                     width="20"
                     height="20"
+                    class="nav__icon"
                 /></a>
               </li>
               <li>
@@ -197,6 +209,7 @@
                     fetchpriority="high"
                     width="20"
                     height="20"
+                    class="nav__icon"
                 /></a>
               </li>
               <li>
@@ -209,6 +222,7 @@
                     fetchpriority="high"
                     width="20"
                     height="20"
+                    class="nav__icon"
                 /></a>
               </li>
             </ul>
@@ -259,6 +273,7 @@
                 aria-hidden="true"
                 width="52"
                 height="56"
+                class="services__boat"
               />
             </div>
             <div class="services__content">
@@ -279,6 +294,7 @@
                 aria-hidden="true"
                 width="57"
                 height="46"
+                class="services__drawers"
               />
             </div>
             <div class="services__content">
@@ -299,6 +315,7 @@
                 aria-hidden="true"
                 width="76"
                 height="66"
+                class="services__airplane"
               />
             </div>
             <div class="services__content">
@@ -319,6 +336,7 @@
                 aria-hidden="true"
                 width="62"
                 height="62"
+                class="services__truck"
               />
             </div>
             <div class="services__content">
@@ -345,11 +363,7 @@
             media="(max-width: 767px)"
             type="image/jpg"
           />
-          <source
-            srcset="/assets/imgs/Cargo.png"
-            media="/assets/imgs/Cargo.png"
-            type="image/png"
-          />
+          <source srcset="/assets/imgs/Cargo.png" type="image/png" />
           <img
             src="/assets/imgs/Cargo.webp"
             alt=""
@@ -386,6 +400,7 @@
                   aria-hidden="true"
                   width="58"
                   height="58"
+                  class="about__icon"
                 />
                 <h3 class="about__subtitle">Delivery on Time</h3>
               </div>
@@ -398,6 +413,7 @@
                   aria-hidden="true"
                   width="58"
                   height="58"
+                  class="about__icon"
                 />
                 <h3 class="about__subtitle">Optimized Travel Cost</h3>
               </div>
@@ -790,6 +806,7 @@
                 aria-hidden="true"
                 width="63"
                 height="63"
+                class="why__icon"
               />
               <h3 class="why__subtitle">Safe Package</h3>
             </div>
@@ -802,6 +819,7 @@
                 aria-hidden="true"
                 width="63"
                 height="63"
+                class="why__icon"
               />
               <h3 class="why__subtitle">Ship Everywhere</h3>
             </div>
@@ -814,6 +832,7 @@
                 aria-hidden="true"
                 width="63"
                 height="63"
+                class="why__icon"
               />
               <h3 class="why__subtitle">Global Tracking</h3>
             </div>
@@ -826,6 +845,7 @@
                 aria-hidden="true"
                 width="63"
                 height="63"
+                class="why__icon"
               />
               <h3 class="why__subtitle">24/7 Support</h3>
             </div>
@@ -838,6 +858,7 @@
                 aria-hidden="true"
                 width="63"
                 height="63"
+                class="why__icon"
               />
               <h3 class="why__subtitle">In Time Delivery</h3>
             </div>
@@ -850,6 +871,7 @@
                 aria-hidden="true"
                 width="63"
                 height="63"
+                class="why__icon"
               />
               <h3 class="why__subtitle">Transparent Pricing</h3>
             </div>
@@ -1030,9 +1052,10 @@
                     alt="icon"
                     decoding="async"
                     aria-hidden="true"
-                    fetchpriority="high"
+                    loading="lazy"
                     width="63"
                     height="63"
+                    class="contact__icon"
                   />
                   <div class="contact__details">
                     <span>Email</span>
@@ -1045,9 +1068,10 @@
                     alt="icon"
                     decoding="async"
                     aria-hidden="true"
-                    fetchpriority="high"
+                    loading="lazy"
                     width="63"
                     height="63"
+                    class="contact__icon"
                   />
                   <div class="contact__details">
                     <span>Call Us</span>
@@ -1060,9 +1084,10 @@
                     alt="icon"
                     decoding="async"
                     aria-hidden="true"
-                    fetchpriority="high"
+                    loading="lazy"
                     width="63"
                     height="63"
+                    class="contact__icon"
                   />
                   <div class="contact__details">
                     <span>Mon - Sat 9.00 - 18.00</span>
@@ -1351,7 +1376,196 @@
             <div class="project__blob"></div></div
         ></a>
       </section>
+      <section class="background">
+        <picture>
+          <source
+            srcset="/assets/imgs/background-footer-mobile.jpg"
+            media="(max-width: 767px)"
+            type="image/jpg"
+          />
+          <source
+            srcset="/assets/imgs/background-footer.png"
+            type="image/png"
+          />
+          <img
+            src="/assets/imgs/background-footer.webp"
+            alt=""
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+            width="1920"
+            height="412"
+            class="about__background"
+          />
+        </picture>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="footer__faded"></div>
+      <div class="footer__content">
+        <div class="footer__wrapper">
+          <div class="footer__container">
+            <img
+              src="/assets/svgs/Logo.svg"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+              width="210"
+              height="36"
+              class="footer__logo"
+            />
+            <p class="footer__paragraph">
+              Leverage agile frameworks to provide a robust synopsis for
+              strategy foster collaborative thinking to further the overall
+              value proposition.
+            </p>
+          </div>
+          <ul class="footer__contact">
+            <li class="header__item">
+              <img
+                src="assets/svgs/Email.svg"
+                alt="icon"
+                decoding="async"
+                aria-hidden="true"
+                loading="lazy"
+                width="63"
+                height="63"
+                class="footer__icon"
+              />
+              <div class="header__info">
+                <span>Email</span>
+                <span>contact@logistics.com</span>
+              </div>
+            </li>
+            <li class="header__item">
+              <img
+                src="assets/svgs/Phone.svg"
+                alt="icon"
+                decoding="async"
+                aria-hidden="true"
+                loading="lazy"
+                width="63"
+                height="63"
+                class="footer__icon"
+              />
+              <div class="header__info">
+                <span>Call Us</span>
+                <span>(00) 112 365 489</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__wrapper footer__wrapper--nav">
+          <div>
+            <h2 class="footer__title">Pages</h2>
+            <ul class="footer__list">
+              <li class="footer__item"><a href="#">About Us</a></li>
+              <li class="footer__item"><a href="#">Our Team</a></li>
+              <li class="footer__item"><a href="#">Our Projects</a></li>
+              <li class="footer__item"><a href="#">Pricing</a></li>
+              <li class="footer__item"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer__title">Utility</h2>
+            <ul class="footer__list">
+              <li class="footer__item"><a href="#">Style Guide</a></li>
+              <li class="footer__item"><a href="#">Changelog</a></li>
+              <li class="footer__item"><a href="#">Licenses</a></li>
+              <li class="footer__item"><a href="#">Protected</a></li>
+              <li class="footer__item"><a href="#">Not Found</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__form">
+          <h2 class="footer__title">Subscribe</h2>
+          <form id="footer__form" name="Contact Form" method="post">
+            <div class="contact__group">
+              <input
+                required=""
+                id="name"
+                name="name"
+                placeholder="Email here*"
+                class="footer__input"
+              />
+            </div>
+            <div class="footer__sbs">
+              <a href="/about.html" class="home__cta"
+                ><span class="home__text">Send Now</span>
+              </a>
+              <ul class="footer__socials">
+                <li>
+                  <a href="#"
+                    ><img
+                      src="/assets/svgs/LinkedIn.svg"
+                      alt="LinkedIn"
+                      aria-hidden="true"
+                      decoding="async"
+                      loading="lazy"
+                      width="20"
+                      height="20"
+                      class="footer__social"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="/assets/svgs/Twitter.svg"
+                      alt="Twitter"
+                      aria-hidden="true"
+                      decoding="async"
+                      loading="lazy"
+                      width="20"
+                      height="20"
+                      class="footer__social"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="/assets/svgs/Facebook.svg"
+                      alt="Facebook"
+                      aria-hidden="true"
+                      decoding="async"
+                      loading="lazy"
+                      width="20"
+                      height="20"
+                      class="footer__social"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer__credits">
+        <div class="footer__wrapper--credits">
+          <span class="footer__copyright"
+            >Copyright © TransitFlow | Designed by VictorFlow - Hand coded by
+            <a href="https://github.com/kenjinakagava" target="_blank"
+              >Kenji Nakagava</a
+            ></span
+          >
+          <div class="footer__utility">
+            <ul class="footer__group">
+              <li class="footer__item footer__item--faded">
+                <a href="#">Style Guide</a>
+              </li>
+              <li class="footer__item footer__item--faded">
+                <a href="#">Licenses</a>
+              </li>
+              <li class="footer__item footer__item--faded">
+                <a href="#">Changelog</a>
+              </li>
+              <li class="footer__item footer__item--faded">
+                <a href="#">Password</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

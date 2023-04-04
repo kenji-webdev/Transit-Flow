@@ -82,9 +82,9 @@
   margin: $margin;
 }
 
-@mixin paragraph($margin: 0 0 2rem 0) {
+@mixin paragraph($margin: 0 0 2rem 0, $color: var(--secondary-font-color)) {
   font-size: 1rem;
-  color: var(--secondary-font-color);
+  color: $color;
   line-height: 1.5rem;
   font-weight: 500;
   margin: $margin;
