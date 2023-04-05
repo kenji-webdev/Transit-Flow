@@ -5,12 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transit Flow | Kenji Nakagava</title>
+    <meta
+      name="description"
+      content="Design made by VictorFlow, code by Kenji Nakagava"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/imgs/Ship.webp"
+      imagesrcset="/assets/imgs/Ship-700.webp 700w"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/assets/fonts/rubik-v26-latin-regular.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/assets/fonts/rubik-v26-latin-700.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/assets/fonts/krub-v9-latin-regular.woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="/styles/home.css" />
   </head>
   <body>
     <header class="header">
       <div class="header__topbar">
-        <a href="/" aria-description="go to homepage">
+        <a href="/" aria-label="go to homepage">
           <img
             src="assets/svgs/Logo.svg"
             alt="logo"
@@ -79,7 +110,7 @@
           <!-- Only shows for tablet -->
           <ul class="nav__socials nav__socials--tablet">
             <li>
-              <a href="#"
+              <a href="#" aria-label="visit our instagram"
                 ><img
                   src="/assets/svgs/Instagram.svg"
                   alt="Instagram"
@@ -92,7 +123,7 @@
               /></a>
             </li>
             <li>
-              <a href="#"
+              <a href="#" aria-label="visit our facebook"
                 ><img
                   src="/assets/svgs/Facebook.svg"
                   alt="Facebook"
@@ -105,7 +136,7 @@
               /></a>
             </li>
             <li>
-              <a href="#"
+              <a href="#" aria-label="visit our twitter"
                 ><img
                   src="/assets/svgs/Twitter.svg"
                   alt="Twitter"
@@ -118,7 +149,7 @@
               /></a>
             </li>
             <li>
-              <a href="#"
+              <a href="#" aria-label="visit our LinkedIn"
                 ><img
                   src="/assets/svgs/LinkedIn.svg"
                   alt="LinkedIn"
@@ -174,7 +205,7 @@
           <div class="nav__right">
             <ul class="nav__socials">
               <li>
-                <a href="#"
+                <a href="#" aria-label="visit our instagram"
                   ><img
                     src="/assets/svgs/Instagram.svg"
                     alt="Instagram"
@@ -187,7 +218,7 @@
                 /></a>
               </li>
               <li>
-                <a href="#"
+                <a href="#" aria-label="visit our facebook"
                   ><img
                     src="/assets/svgs/Facebook.svg"
                     alt="Facebook"
@@ -200,7 +231,7 @@
                 /></a>
               </li>
               <li>
-                <a href="#"
+                <a href="#" aria-label="visit our twitter"
                   ><img
                     src="/assets/svgs/Twitter.svg"
                     alt="Twitter"
@@ -213,7 +244,7 @@
                 /></a>
               </li>
               <li>
-                <a href="#"
+                <a href="#" aria-label="visit our LinkedIn"
                   ><img
                     src="/assets/svgs/LinkedIn.svg"
                     alt="LinkedIn"
@@ -472,7 +503,7 @@
             <div class="project__card">
               <picture>
                 <source
-                  src="/assets/imgs/liquid_transporation.png"
+                  srcset="/assets/imgs/liquid_transporation.png"
                   type="image/png"
                 />
                 <img
@@ -493,7 +524,7 @@
             <div class="project__card">
               <picture>
                 <source
-                  src="/assets/imgs/packaging_solutions.png"
+                  srcset="/assets/imgs/packaging_solutions.png"
                   type="image/png"
                 />
                 <img
@@ -514,7 +545,7 @@
             <div class="project__card">
               <picture>
                 <source
-                  src="/assets/imgs/contract_logistics.png"
+                  srcset="/assets/imgs/contract_logistics.png"
                   type="image/png"
                 />
                 <img
@@ -535,7 +566,7 @@
             <div class="project__card">
               <picture>
                 <source
-                  src="/assets/imgs/warehouse_distribution.png"
+                  srcset="/assets/imgs/warehouse_distribution.png"
                   type="image/png"
                 />
                 <img
@@ -556,7 +587,7 @@
             <div class="project__card">
               <picture>
                 <source
-                  src="/assets/imgs/specialized_transport.png"
+                  srcset="/assets/imgs/specialized_transport.png"
                   type="image/png"
                 />
                 <img
@@ -619,7 +650,10 @@
             <div class="testimonial__profile">
               <div class="testimonial__wrapper">
                 <picture>
-                  <source src="/assets/imgs/homereview1.png" type="image/png" />
+                  <source
+                    srcset="/assets/imgs/homereview1.png"
+                    type="image/png"
+                  />
                   <img
                     src="/assets/imgs/homereview1.webp"
                     alt="client"
@@ -666,7 +700,10 @@
             <div class="testimonial__profile">
               <div class="testimonial__wrapper">
                 <picture>
-                  <source src="/assets/imgs/homereview2.png" type="image/png" />
+                  <source
+                    srcset="/assets/imgs/homereview2.png"
+                    type="image/png"
+                  />
                   <img
                     src="/assets/imgs/homereview2.webp"
                     alt="client"
@@ -713,7 +750,10 @@
             <div class="testimonial__profile">
               <div class="testimonial__wrapper">
                 <picture>
-                  <source src="/assets/imgs/homereview2.png" type="image/png" />
+                  <source
+                    srcset="/assets/imgs/homereview2.png"
+                    type="image/png"
+                  />
                   <img
                     src="/assets/imgs/homereview2.webp"
                     alt="client"
@@ -762,7 +802,7 @@
         <div class="why__image">
           <div class="why__wrapper">
             <picture>
-              <source src="/assets/imgs/Airplane.png" type="image/png" />
+              <source srcset="/assets/imgs/Airplane.png" type="image/png" />
               <img
                 src="/assets/imgs/Airplane.webp"
                 alt="client"
@@ -774,7 +814,7 @@
               />
             </picture>
             <picture>
-              <source src="/assets/imgs/FeatureTag.png" type="image/png" />
+              <source srcset="/assets/imgs/FeatureTag.png" type="image/png" />
               <img
                 src="/assets/imgs/FeatureTag.webp"
                 alt="client"
@@ -884,7 +924,7 @@
         <div class="team__container">
           <div class="team__card">
             <picture>
-              <source src="/assets/imgs/jessca.png" type="image/png" />
+              <source srcset="/assets/imgs/jessca.png" type="image/png" />
               <img
                 src="/assets/imgs/jessca.webp"
                 alt="team member"
@@ -934,7 +974,7 @@
           </div>
           <div class="team__card">
             <picture>
-              <source src="/assets/imgs/kathleen.png" type="image/png" />
+              <source srcset="/assets/imgs/kathleen.png" type="image/png" />
               <img
                 src="/assets/imgs/kathleen.webp"
                 alt="team member"
@@ -994,7 +1034,7 @@
           </div>
           <div class="team__card">
             <picture>
-              <source src="/assets/imgs/rebecca.png" type="image/png" />
+              <source srcset="/assets/imgs/rebecca.png" type="image/png" />
               <img
                 src="/assets/imgs/rebecca.webp"
                 alt="team member"
@@ -1108,7 +1148,7 @@
               />
               <input
                 required=""
-                id="email"
+                id="contact__email"
                 name="email"
                 placeholder="Email*"
                 class="contact__input"
@@ -1484,8 +1524,8 @@
             <div class="contact__group">
               <input
                 required=""
-                id="name"
-                name="name"
+                id="footer__email"
+                name="email"
                 placeholder="Email here*"
                 class="footer__input"
               />
@@ -1496,7 +1536,7 @@
               </a>
               <ul class="footer__socials">
                 <li>
-                  <a href="#"
+                  <a href="#" aria-label="visit our LinkedIn"
                     ><img
                       src="/assets/svgs/LinkedIn.svg"
                       alt="LinkedIn"
@@ -1509,7 +1549,7 @@
                   /></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#" aria-label="visit our twitter"
                     ><img
                       src="/assets/svgs/Twitter.svg"
                       alt="Twitter"
@@ -1522,7 +1562,7 @@
                   /></a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#" aria-label="visit our facebook"
                     ><img
                       src="/assets/svgs/Facebook.svg"
                       alt="Facebook"

@@ -94,15 +94,6 @@ button {
   font-weight: 600;
   src: url("../assets/fonts/krub-v9-latin-600.woff2") format("woff2"), url("../assets/fonts/krub-v9-latin-600.woff") format("woff");
   /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
-/* krub-700 - latin */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Krub";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../assets/fonts/krub-v9-latin-700.woff2") format("woff2"), url("../assets/fonts/krub-v9-latin-700.woff") format("woff");
-  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 /* league-spartan-regular - latin */
 @font-face {
   font-display: swap;
@@ -178,7 +169,9 @@ button {
       padding-bottom: 1rem; }
   .nav__dropdown--icon {
     transition: 0.2s;
-    margin-left: 0.3125rem; }
+    margin-left: 0.3125rem;
+    width: 0.625rem;
+    height: 0.625rem; }
   .nav__pages {
     display: flex;
     flex-direction: column;
