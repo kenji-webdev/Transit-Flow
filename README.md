@@ -1,12 +1,15 @@
 # Transit Flow
 
-Este é um projeto de uma Landing Page que desenvolvi seguindo um design no Figma. 
+[EN Version](https://github.com/kenjinakagava/Transit-Flow/blob/master/EN_README.md)
+
+Este é um projeto de uma Landing Page que desenvolvi seguindo um design no Figma.
 
 [Link do Design](https://www.figma.com/file/52QdFVCyPScxsZJA9ASVwj/TransitFlow-by-VictorFlow?node-id=0%3A1&t=7eS7sxLfGd9s60pS-1)
 
 # Descrição do projeto
-Transit Flow é uma página de destino criada para mostrar um serviço de transporte. 
-O objetivo principal é fornecer aos usuários uma visão clara e informativa do serviço, permitindo que eles entendam suas características e benefícios. 
+
+Transit Flow é uma Landing Page criada para mostrar um serviço de transporte.
+O objetivo principal é fornecer aos usuários uma visão clara e informativa do serviço, permitindo que eles entendam suas características e benefícios.
 A página de destino é projetada com uma abordagem moderna e minimalista, seguindo as diretrizes de design do Figma.
 
 # Resolução de problemas
@@ -22,7 +25,7 @@ Os seguintes são os requerimentos que tive que cumprir durante o desenvolviment
 
 - Para cumprir esse requerimento, testei minuciosamente o site usando o Chrome DevTools, procurando por quaisquer erros ou problemas que possam afetar a experiência do usuário em qualquer tamanho de tela.
 - Também validei a página usando o [W3C Validator](https://validator.w3.org/) para garantir que a página não tenha erros de marcação.
-![image](https://user-images.githubusercontent.com/98567681/230235409-44a6f6b7-5097-4a85-a28f-2d100a50f5f4.png)
+  ![image](https://user-images.githubusercontent.com/98567681/230235409-44a6f6b7-5097-4a85-a28f-2d100a50f5f4.png)
 
 ## Avaliar e melhorar o desempenho do site.
 
@@ -48,18 +51,24 @@ Os seguintes são os requerimentos que tive que cumprir durante o desenvolviment
 ![image](https://user-images.githubusercontent.com/98567681/230235981-0e9b3363-2900-4938-a2c3-8a299ee467ef.png)
 
 ## Gerenciar ambientes de desenvolvimento.
+
 - Para cumprir esse requerimento, usei o Git para gerenciar as alterações de código e o controle de versão.
 
 ## Trabalhar com boas práticas de desenvolvimento.
-- Para cumprir esse requerimento, trabalhei com a metodologia BEM nesse projeto, que junto com o SASS, facilita a nomeação de classes do CSS, além disso fiz uso das tags semânticas do HTML, além dos atributos ARIA, fazendo com que o site seja mais acessível à pessoas com leitores de tela.
+
+- Para cumprir esse requerimento, trabalhei com a metodologia BEM nesse projeto, que junto com o SASS, facilita a nomeação de classes do CSS.
+- Além disso fiz uso das tags semânticas do HTML, e atributos ARIA, fazendo com que o site seja mais acessível à pessoas com leitores de tela.
 
 ## Automatizar processos (sempre que possível).
+
 - Para cumprir esse requerimento, usei a plataforma Netlify para automatizar o processo de minificação de arquivos e publicação do site.
 
 ## Documentar processos de desenvolvimento.
+
 - Para cumprir esse requerimento, utilizei das mensagens de commit do git, onde descrevo qual parte do site eu desenvolvi / modifiquei.
 
 # Tecnologias utilizadas
+
 Segue as tecnologias utilizadas para desenvolver o Transit Flow:
 
 - HTML
@@ -71,4 +80,5 @@ Segue as tecnologias utilizadas para desenvolver o Transit Flow:
 - Netlify
 
 # Conclusão
+
 Transit Flow é um projeto de uma Landing Page que demonstra minha capacidade de desenvolver sites de alta qualidade de acordo com os layouts definidos pelo UI/UX.
