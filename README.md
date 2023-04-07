@@ -1,6 +1,6 @@
 # Transit Flow
 
-[EN Version](https://github.com/kenjinakagava/Transit-Flow/blob/master/EN_README.md)
+[EN Version](https://github.com/kenjinakagava/Transit-Flow/blob/master/EN_README.MD)
 
 Este é um projeto de uma Landing Page que desenvolvi seguindo um design no Figma.
 
