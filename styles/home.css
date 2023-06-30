@@ -161,17 +161,16 @@ button {
     background-color: var(--secondary-color);
     top: 3.6875rem;
     padding-top: 0;
-    height: 0;
-    transition: height 0.3s, padding-top 0.3s, top 0.3s;
+    max-height: 0;
+    transition: max-height 0.3s, padding-top 0.3s, top 0.3s;
     display: flex;
     flex-direction: column;
     gap: 1rem; }
     .nav__content.open {
-      height: 20.25rem;
-      z-index: 100;
-      padding-bottom: 1rem; }
+      max-height: 20.25rem;
+      z-index: 100; }
     .nav__content.dropdown--open {
-      height: 28.25rem; }
+      max-height: 28.25rem; }
   .nav__dropdown--icon {
     transition: 0.2s;
     margin-left: 0.3125rem;
@@ -942,6 +941,9 @@ button {
       display: none; }
   .contact__clients {
     padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-bottom: 8.9375rem; }
     @media (min-width: 1200px) {
       .contact__clients {
@@ -1125,7 +1127,8 @@ button {
 
   .nav__hamburger {
     margin: 0 0 0 auto;
-    padding-right: 1rem; }
+    padding-right: 1rem;
+    padding-left: 1rem; }
   .nav__socials {
     display: none; }
   .nav__socials--tablet {
@@ -1280,7 +1283,7 @@ button {
   .nav__mobile .nav__cta {
     display: none; }
   .nav__content {
-    height: 4.875rem;
+    max-height: 4.875rem;
     flex-direction: row;
     position: unset;
     background: unset;
